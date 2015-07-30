@@ -2,10 +2,18 @@
 //por ejemplo: `sum([2,4,7])` debe retornar: `13` (la misma xD)
 
 function sum(suma){
+  if(suma.length === 1){
+    return suma[0]
+  } else{
+    return suma.pop() + sum(suma) 
+  }
+}
+
+function sum(suma){
   if(suma.length===1 ){
    return suma[0]
 }
-  return sum + sum(suma-1)
+  return suma + sum(suma-1)
 }
 
 
@@ -15,12 +23,13 @@ function sum(suma){
 //dado que es el resultado de: (7+6+5+4+3+2+1) (la misma de nuevo)
 
 function sumatoria(limite){
-  if (limite===0){
-    return 0
+  if (limite.length===1){
+    return limite[0]
   }else{
     return limite + sumatoria(limite-1)
   }
 }
+
 
 
 //3. Hacer una función que me calcule la N iteración de Fibonacci: 1, 1, 2, 3, 5, 8, 13, 21, //34, 55, 89... 
@@ -44,9 +53,6 @@ function pow(n,x){
   return n * pow(n, x-1)  		
  	}
 }
-
-
-
 
 
 
